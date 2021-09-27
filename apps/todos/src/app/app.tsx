@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
-interface Todo {
-  title: string;
-}
+import { Todo } from '@nx-react-tutorial/data';
 
 export const App = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
