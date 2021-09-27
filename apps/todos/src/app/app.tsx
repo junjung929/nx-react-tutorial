@@ -10,6 +10,12 @@ export const App = () => {
     { title: 'Todo 2' },
   ]);
 
+  function addTodo() {
+    setTodos([
+      ...todos,
+      { title: `New todo ${Math.floor(Math.random() * 1000)}` },
+    ]);
+  }
   return (
     <>
       <h1>Todos</h1>
@@ -18,6 +24,9 @@ export const App = () => {
           <li className={'todo'}>{t.title}</li>
         ))}
       </ul>
+      <button id={'add-todo'} onClick={addTodo}>
+        Add Todo
+      </button>
     </>
   );
 };
